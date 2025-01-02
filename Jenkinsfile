@@ -18,7 +18,7 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'cd client && npm install'
+        sh 'cd client && npm install --timeout=300000'
       }
     }
   }
