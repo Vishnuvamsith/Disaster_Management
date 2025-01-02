@@ -1,7 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'node:16-alpine'// mount Docker socket to access the host's Docker daemon
+      image 'node:16-alpine'
+      args '--user root'// mount Docker socket to access the host's Docker daemon
     }
   }
   stages {
